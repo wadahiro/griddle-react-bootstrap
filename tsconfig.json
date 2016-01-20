@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "declaration": true,
+        "newLine": "LF",
+        "rootDir": "src",
+        "outDir": "lib",
+        "sourceMap": true
+    },
+    "exclude": [
+        "lib",
+        "node_modules",
+        "example",
+        "test"
+    ]
+}

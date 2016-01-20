@@ -1,0 +1,35 @@
+{
+    "name": "griddle-bootstrap-pagination",
+    "version": "0.1.0",
+    "description": "Bootstrap pagination for griddle-react",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "mocha --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
+        "watch": "mocha -w --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
+        "dev": "set NODE_ENV=development && webpack -v -w",
+        "build": "set NODE_ENV=production && webpack -p"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wadahiro/griddle-bootstrap-pagination.git"
+    },
+    "author": "Hiroyuki Wada",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/wadahiro/griddle-bootstrap-pagination/issues"
+    },
+    "homepage": "https://github.com/wadahiro/griddle-bootstrap-pagination#readme",
+    "devDependencies": {
+        "espower-typescript": "^3.0.0",
+        "griddle-react": "^0.3.1",
+        "mocha": "^2.3.4",
+        "power-assert": "^1.2.0",
+        "react": "^0.14.6",
+        "react-bootstrap": "^0.28.2",
+        "react-dom": "^0.14.6",
+        "ts-loader": "^0.7.2",
+        "typescript": "^1.8.0-dev.20160119",
+        "webpack": "^1.12.11"
+    },
+    "typings": "lib/index.d.ts"
+}
