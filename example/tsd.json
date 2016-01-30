@@ -10,6 +10,12 @@
     },
     "react/react-dom.d.ts": {
       "commit": "2e7a477ac2b6471055aa6e0e56b333e8f327d6b7"
+    },
+    "react-bootstrap/react-bootstrap.d.ts": {
+      "commit": "2e7a477ac2b6471055aa6e0e56b333e8f327d6b7"
+    },
+    "node/node.d.ts": {
+      "commit": "2e7a477ac2b6471055aa6e0e56b333e8f327d6b7"
     }
   }
 }
