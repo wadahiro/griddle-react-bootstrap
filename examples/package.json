@@ -24,7 +24,7 @@
   },
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "griddle-react-bootstrap": "^0.1.1",
+    "griddle-react-bootstrap": "^0.2.0",
     "griddle-react": "^0.3.1",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
