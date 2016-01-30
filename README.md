@@ -18,16 +18,16 @@ Features:
 Install this library and the dependencies by npm.
 
 ```bash
-npm install griddle-bootstrap --save
+npm install griddle-react-bootstrap --save
 npm install react react-dom --save
 npm install griddle-react --save
 npm install react-bootstrap --save
 ```
 
-And import and render component you want to use. Please check [example page](http://wadahiro.github.io/griddle-bootstrap/).
+And import and render component you want to use. Please check [example page](http://wadahiro.github.io/griddle-react-bootstrap/).
 
 ```js
-import { BootstrapPager, GriddleBootstrap } from 'griddle-bootstrap';
+import { BootstrapPager, GriddleBootstrap } from 'griddle-react-bootstrap';
 
 ...
 

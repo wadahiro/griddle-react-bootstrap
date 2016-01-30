@@ -1,5 +1,5 @@
 {
-  "name": "griddle-bootstrap",
+  "name": "griddle-react-bootstrap",
   "version": "0.1.2",
   "description": "Bootstrap style for griddle-react",
   "keywords": ["react", "react-component", "griddle"],
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wadahiro/griddle-bootstrap.git"
+    "url": "git+https://github.com/wadahiro/griddle-react-bootstrap.git"
   },
   "author": "Hiroyuki Wada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wadahiro/griddle-bootstrap/issues"
+    "url": "https://github.com/wadahiro/griddle-react-bootstrap/issues"
   },
-  "homepage": "https://github.com/wadahiro/griddle-bootstrap#readme",
+  "homepage": "https://github.com/wadahiro/griddle-react-bootstrap#readme",
   "devDependencies": {
     "espower-typescript": "^3.0.0",
     "gh-pages": "^0.9.0",
