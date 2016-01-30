@@ -19,7 +19,6 @@ Install this library and the dependencies by npm.
 
 ```bash
 npm install griddle-bootstrap --save
-npm install react --save
 npm install react react-dom --save
 npm install griddle-react --save
 npm install react-bootstrap --save
