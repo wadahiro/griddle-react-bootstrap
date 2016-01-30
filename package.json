@@ -1,6 +1,6 @@
 {
   "name": "griddle-react-bootstrap",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Bootstrap style for griddle-react",
   "keywords": ["react", "react-component", "griddle"],
   "main": "lib/index.js",
