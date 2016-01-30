@@ -9,7 +9,7 @@
     "dev": "set NODE_ENV=development && webpack -v -w",
     "build": "set NODE_ENV=production && webpack -p",
     "deploy": "gh-pages -d examples/public",
-    "prepublish": "$(npm bin)/tsc"
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
