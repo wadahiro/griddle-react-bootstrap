@@ -49,8 +49,6 @@ export default class App extends React.Component<Props, any> {
     tableClassName={'table table-bordered table-striped table-hover'}
     useGriddleStyles={false}
     results={fakeData}
-    showSettings={true}
-    showFilter={true}
     useCustomPagerComponent={true}
     customPagerComponent={ BootstrapPager }
     />`}
