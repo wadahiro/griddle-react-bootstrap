@@ -6,4 +6,9 @@ typings/
 dist/
 examples/
 npm-debug.log
+webpack.*
+tsconfig.json
+tsd.json
+.vscode
 .gitignore
+.npmignore
