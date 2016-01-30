@@ -1,14 +1,15 @@
 {
   "name": "griddle-bootstrap",
   "version": "0.1.0",
-  "description": "Bootstrap pagination for griddle-react",
+  "description": "Bootstrap style for griddle-react",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
     "watch": "mocha -w --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
     "dev": "set NODE_ENV=development && webpack -v -w",
     "build": "set NODE_ENV=production && webpack -p",
-    "deploy": "gh-pages -d examples/public"
+    "deploy": "gh-pages -d examples/public",
+    "prepublish": "$(npm bin)/tsc"
   },
   "repository": {
     "type": "git",

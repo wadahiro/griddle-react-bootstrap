@@ -1,6 +1,9 @@
 .git/
 node_modules/
 src/
-example/
+test/
+typings/
+dist/
+examples/
 npm-debug.log
 .gitignore
