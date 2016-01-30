@@ -36,7 +36,7 @@ export default class App extends React.Component<Props, any> {
             <div>
                 <div className="bs-docs-header">
                     <div className="container" >
-                        <h1>Griddle Bootstrap Pagination Examples</h1>
+                        <h1>Griddle Bootstrap Examples</h1>
                     </div>
                 </div>
                 <Grid>
