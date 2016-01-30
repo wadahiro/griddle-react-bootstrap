@@ -4,7 +4,7 @@ import {
     Grid,
     PageHeader
 } from 'react-bootstrap';
-import { BootstrapPager, GriddleBootstrap} from 'griddle-bootstrap-pagination';
+import { BootstrapPager, GriddleBootstrap} from 'griddle-bootstrap';
 
 const Griddle = require('griddle-react');
 

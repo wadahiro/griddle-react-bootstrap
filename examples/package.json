@@ -1,5 +1,5 @@
 {
-  "name": "griddle-bootstrap-pagination-example",
+  "name": "griddle-bootstrap-examples",
   "version": "0.1.0",
   "description": "Example for Bootstrap pagination for griddle-react",
   "main": "lib/index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wadahiro/griddle-bootstrap-pagination.git"
+    "url": "git+https://github.com/wadahiro/griddle-bootstrap.git"
   },
   "author": "Hiroyuki Wada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wadahiro/griddle-bootstrap-pagination/issues"
+    "url": "https://github.com/wadahiro/griddle-bootstrap/issues"
   },
-  "homepage": "https://github.com/wadahiro/griddle-bootstrap-pagination#readme",
+  "homepage": "https://github.com/wadahiro/griddle-bootstrap#readme",
   "devDependencies": {
     "ts-loader": "^0.7.2",
     "typescript": "^1.8.0-dev.20160119",
@@ -25,7 +25,7 @@
   "typings": "lib/index.d.ts",
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "griddle-bootstrap-pagination": "../",
+    "griddle-bootstrap": "../",
     "griddle-react": "^0.3.1",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
