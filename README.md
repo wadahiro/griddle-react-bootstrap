@@ -1,4 +1,4 @@
-# Griddle Bootstrap
+# Griddle React Bootstrap
 
 - [About](#about)
 - [Quick Start](#quick-start)
