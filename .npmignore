@@ -3,7 +3,6 @@ node_modules/
 src/
 test/
 typings/
-dist/
 examples/
 npm-debug.log
 webpack.*
