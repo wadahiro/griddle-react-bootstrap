@@ -1,9 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {
-    Grid,
-    PageHeader
-} from 'react-bootstrap';
+import { Grid, PageHeader } from 'react-bootstrap';
 import { BootstrapPager, GriddleBootstrap} from 'griddle-react-bootstrap';
 
 const Griddle = require('griddle-react');
@@ -48,7 +45,7 @@ export default class App extends React.Component<Props, any> {
                     <PageHeader>GriddleBootstrap</PageHeader>
 
                     <p>You can use <b>GriddleBootstrap Component</b> instead of Griddle Component.
-                        This component shows a paging index information! Of course,
+                        This component shows a paging index information!Of course,
                         you can use <a href='http://griddlegriddle.github.io/Griddle/properties.html'>props of the Griddle</a>.
                     </p>
 
