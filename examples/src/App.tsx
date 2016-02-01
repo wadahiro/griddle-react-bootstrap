@@ -14,24 +14,7 @@ export interface Props extends React.Props<App> {
 }
 
 export default class App extends React.Component<Props, any> {
-    state = {
-        pageSize: 5
-    };
-
-    setPageSize = (event) => {
-        // this.setState({ pageSize: event.target.value });
-        // const griddle = this.refs['griddle'];
-        // griddle.setPageSize(event.target.value);
-    };
-
-    griddle = null;
-
     render() {
-        const selectPageSizeStyle = {
-            width: 75,
-            display: 'inline-block'
-        };
-
         return (
             <div>
                 <div className="bs-docs-header">
