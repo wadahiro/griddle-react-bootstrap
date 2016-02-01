@@ -24,7 +24,7 @@ npm install griddle-react --save
 npm install react-bootstrap --save
 ```
 
-And import and render component you want to use. Please check [example page](http://wadahiro.github.io/griddle-react-bootstrap/).
+And import `griddle-react-bootstrap` and use it. Please check [example page](http://wadahiro.github.io/griddle-react-bootstrap/).
 
 ```js
 import { BootstrapPager, GriddleBootstrap } from 'griddle-react-bootstrap';
@@ -35,15 +35,21 @@ import { BootstrapPager, GriddleBootstrap } from 'griddle-react-bootstrap';
         tableClassName={'table table-bordered table-striped table-hover'}
         useGriddleStyles={false}
         results={fakeData}
-        showSettings={true}
         showFilter={true}
+        showSettings={true}
+        settingsToggleClassName='btn btn-default'
         useCustomPagerComponent={true}
         customPagerComponent={ BootstrapPager }
         />
 
 or
 
-    <GriddleBootstrap bordered={true} hover={true} striped={true} results={fakeData} />
+    <GriddleBootstrap
+        bordered={true}
+        striped={true}
+        hover={true}
+        results={fakeData} 
+        />
 ```
 
 And import custom css for griddle (`griddle-react-bootstrap.css`) which is included in `node_modules/griddle-react-bootstrap/dist` directory.

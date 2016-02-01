@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createBootstrapPager } from './BootstrapPagerFactory';
+import { createBootstrapPagerWithPageInfo } from './BootstrapPagerFactory';
 
 const Griddle = require('griddle-react');
 
@@ -24,6 +24,11 @@ export interface GriddleBootstrapProps extends GriddleProps<GriddleBootstrap> {
     hover?: boolean;
     striped?: boolean;
     tableClassName?: string;
+    pagerOptions?: PagerOptions;
+}
+
+export interface PagerOptions {
+    maxButtons?: number;
 }
 
 export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any> {
@@ -33,6 +38,9 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
         condensed: false,
         hover: false,
         striped: false,
+        pagerOptions: {
+            maxButtons: 5
+        }
     };
 
     render() {
@@ -60,7 +68,7 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
                 useGriddleStyles={false}
                 settingsToggleClassName='btn btn-default'
                 useCustomPagerComponent={true}
-                customPagerComponent={ createBootstrapPager() }
+                customPagerComponent={ createBootstrapPagerWithPageInfo(this.props.pagerOptions) }
                 />
         );
     }
