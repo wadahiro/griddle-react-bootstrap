@@ -16,15 +16,7 @@ export interface BootstrapPagerProps extends React.Props<BootstrapPager> {
 
 export class BootstrapPager extends React.Component<BootstrapPagerProps, any>{
     static defaultProps = {
-        maxButtons: 5,
-        pagerStyle: {
-            float: 'right!important',
-            paddingRight: 16
-        },
-        pagingInfoStyle: {
-            float: 'left!important',
-            paddingLeft: 16
-        }
+        maxButtons: 5
     };
 
     handleSelect = (event, selectedEvent) => {
@@ -69,12 +61,12 @@ export class BootstrapPager extends React.Component<BootstrapPagerProps, any>{
 
         return (
             <div className='row'>
-                <div style={this.props.pagingInfoStyle}>
+                <div className='paginate-info'>
                     <label className='pagination'>
                         {info}
                     </label>
                 </div>
-                <div style={this.props.pagerStyle}>
+                <div className='paginate'>
                     <Pagination
                         prev={true}
                         next={true}

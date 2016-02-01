@@ -46,6 +46,8 @@ or
     <GriddleBootstrap bordered={true} hover={true} striped={true} results={fakeData} />
 ```
 
+And import custom css for griddle (`griddle-react-bootstrap.css`) which is included in `node_modules/griddle-react-bootstrap/dist` directory.
+
 ## License
 
 Licensed under the [MIT](/LICENSE.txt) license.

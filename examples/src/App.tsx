@@ -22,12 +22,19 @@ export default class App extends React.Component<Props, any> {
                 <Grid>
                     <PageHeader>BootstrapPager</PageHeader>
 
-                    <p>You can use <b>BootstrapPager Component</b> as <a href='http://griddlegriddle.github.io/Griddle/customization.html'>Custom Paging Component of Griddle</a>.</p>
+                    <p>
+                        You can use <b>BootstrapPager Component</b> as
+                        <a href='http://griddlegriddle.github.io/Griddle/customization.html'>Custom Paging Component of Griddle</a>.
+                        To display Bootstrap table style, you must set some props of Griddle as follows.
+                    </p>
 
                     <pre>
                         {`<Griddle
     tableClassName={'table table-bordered table-striped table-hover'}
     useGriddleStyles={false}
+    showFilter={true}
+    showSettings={true}
+    settingsToggleClassName='btn btn-default'
     results={fakeData}
     useCustomPagerComponent={true}
     customPagerComponent={ BootstrapPager }
@@ -37,6 +44,9 @@ export default class App extends React.Component<Props, any> {
                     <Griddle
                         tableClassName={'table table-bordered table-striped table-hover'}
                         useGriddleStyles={false}
+                        showFilter={true}
+                        showSettings={true}
+                        settingsToggleClassName='btn btn-default'
                         results={fakeData}
                         useCustomPagerComponent={true}
                         customPagerComponent={ BootstrapPager }
@@ -44,16 +54,34 @@ export default class App extends React.Component<Props, any> {
 
                     <PageHeader>GriddleBootstrap</PageHeader>
 
-                    <p>You can use <b>GriddleBootstrap Component</b> instead of Griddle Component.
-                        This component shows a paging index information!Of course,
-                        you can use <a href='http://griddlegriddle.github.io/Griddle/properties.html'>props of the Griddle</a>.
+                    <p>
+                        You can use <b>GriddleBootstrap Component</b> instead of Griddle Component.
+                        Because this component is configured for Bootstrap table style, you don't need to set some props of Griddle.
+                        In addition, this component shows a paging index information that isn't displayed in original Griddle.
+                        Of course, you can use <a href='http://griddlegriddle.github.io/Griddle/properties.html'>props of the Griddle</a>.
                     </p>
 
                     <pre>
-                        {`<GriddleBootstrap hover={true} striped={true} results={fakeData} />`}
+                        {`<GriddleBootstrap
+    hover={true}
+    striped={true}
+    bordered={false}
+    condensed={false}
+    showFilter={true}
+    showSettings={true}
+    results={fakeData}
+    />`}
                     </pre>
 
-                    <GriddleBootstrap hover={true} striped={true} results={fakeData} />
+                    <GriddleBootstrap
+                        hover={true}
+                        striped={true}
+                        bordered={false}
+                        condensed={false}
+                        showFilter={true}
+                        showSettings={true}
+                        results={fakeData}
+                        />
                 </Grid>
             </div>
         );

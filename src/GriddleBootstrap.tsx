@@ -58,6 +58,7 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
                 } }
                 tableClassName={tableClassName}
                 useGriddleStyles={false}
+                settingsToggleClassName='btn btn-default'
                 useCustomPagerComponent={true}
                 customPagerComponent={ createBootstrapPager() }
                 />
