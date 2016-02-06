@@ -13,6 +13,8 @@
     },
     "exclude": [
         "lib",
+        "typings/main.d.ts",
+        "typings/main",
         "node_modules",
         "test"
     ]
