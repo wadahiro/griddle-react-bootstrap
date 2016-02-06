@@ -1,8 +1,12 @@
 {
   "name": "griddle-react-bootstrap",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Bootstrap style for griddle-react",
-  "keywords": ["react", "react-component", "griddle"],
+  "keywords": [
+    "react",
+    "react-component",
+    "griddle"
+  ],
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
