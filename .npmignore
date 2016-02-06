@@ -7,7 +7,7 @@ examples/
 npm-debug.log
 webpack.*
 tsconfig.json
-tsd.json
+typings.json
 .vscode
 .gitignore
 .npmignore
