@@ -10,6 +10,7 @@
     "dev": "set NODE_ENV=development && webpack -v -w",
     "build": "set NODE_ENV=production && webpack -p",
     "deploy": "gh-pages -d examples/public",
+    "tscdev": "tsc --outDir examples/node_modules/griddle-react-bootstrap/lib",
     "prepublish": "tsc"
   },
   "repository": {

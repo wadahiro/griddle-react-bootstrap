@@ -34,7 +34,7 @@ function _createBootstrapPager(options: Options = defaultOptions, showPageInfo: 
         }
 
         getTotalResults() {
-            return showPageInfo && Pager.griddle.props.results.length;
+            return showPageInfo && Pager.griddle.props.results && Pager.griddle.props.results.length;
         }
 
         getResutlsPerPage() {

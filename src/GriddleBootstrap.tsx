@@ -3,19 +3,76 @@ import { createBootstrapPagerWithPageInfo } from './BootstrapPagerFactory';
 
 const Griddle = require('griddle-react');
 
+/**
+ * refrences http://griddlegriddle.github.io/Griddle/properties.html
+ */
 export interface GriddleProps<T> extends React.Props<T> {
-    results: any[];
-    showSettings?: boolean;
-    showFilter?: boolean;
-    showPager?: boolean;
+    columns?: any[];
+    columnMetadata?: any[];
+    results?: any[];
     resultsPerPage?: number;
-    useGriddleStyles?: boolean;
+    initialSort?: string;
+    initialSortAscending?: boolean;
+    gridClassName?: string;
     tableClassName?: string;
-    useCustomPagerComponent?: boolean;
-    useCustomGridComponent?: boolean;
-    customPagerComponent?: any;
+    customFormatClassName?: string;
+    settingsText?: string;
+    filterPlaceholderText?: string;
     nextText?: string;
     previousText?: string;
+    maxRowsText?: string;
+    enableCustomFormatText?: string;
+    childrenColumnName?: string;
+    metadataColumns?: any[];
+    showFilter?: boolean;
+    showSettings?: boolean;
+    useCustomRowComponent?: boolean;
+    useCustomGridComponent?: boolean;
+    useCustomPagerComponent?: boolean;
+    useGriddleStyles?: boolean;
+    customRowComponent?: React.ReactInstance;
+    customGridComponent?: React.ReactInstance;
+    customPagerComponent?: React.ReactInstance;
+    enableToggleCustom?: boolean;
+    noDataMessage?: string;
+    customNoDataComponent?: React.ReactInstance;
+    showTableHeading?: boolean;
+    showPager?: boolean;
+    useFixedHeader?: boolean;
+    useExternal?: boolean;
+    externalSetPage?: Function;
+    externalChangeSort?: Function;
+    externalSetFilter?: Function;
+    externalSetPageSize?: Function;
+    externalMaxPage?: number;
+    externalCurrentPage?: number;
+    externalSortColumn?: string;
+    externalSortAscending?: boolean;
+    externalLoadingComponent?: React.ReactInstance;
+    externalIsLoading?: boolean;
+    enableInfiniteScroll?: boolean;
+    bodyHeight?: number;
+    paddingHeight?: number;
+    rowHeight?: number;
+    infiniteScrollLoadTreshold?: number;
+    useFixedLayout?: boolean;
+    isSubGriddle?: boolean;
+    enableSort?: boolean;
+    sortAscendingClassName?: string;
+    sortDescendingClassName?: string;
+    parentRowCollapsedClassName?: string;
+    parentRowExpandedClassName?: string;
+    settingsToggleClassName?: string;
+    nextClassName?: string;
+    previousClassName?: string;
+    sortAscendingComponent?: string;
+    sortDescendingComponent?: string;
+    parentRowCollapsedComponent?: string;
+    parentRowExpandedComponent?: string;
+    settingsIconComponent?: string;
+    nextIconComponent?: string;
+    previousIconComponent?: string;
+    onRowClick?: Function;
 }
 
 export interface GriddleBootstrapProps extends GriddleProps<GriddleBootstrap> {
@@ -23,7 +80,6 @@ export interface GriddleBootstrapProps extends GriddleProps<GriddleBootstrap> {
     condensed?: boolean;
     hover?: boolean;
     striped?: boolean;
-    tableClassName?: string;
     pagerOptions?: PagerOptions;
 }
 
@@ -34,6 +90,7 @@ export interface PagerOptions {
 export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any> {
     static defaultProps = {
         tableClassName: '',
+        settingsToggleClassName: 'btn btn-default',
         bordered: false,
         condensed: false,
         hover: false,
@@ -66,7 +123,6 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
                 } }
                 tableClassName={tableClassName}
                 useGriddleStyles={false}
-                settingsToggleClassName='btn btn-default'
                 useCustomPagerComponent={true}
                 customPagerComponent={ createBootstrapPagerWithPageInfo(this.props.pagerOptions) }
                 />
