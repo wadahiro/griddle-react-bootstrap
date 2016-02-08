@@ -7,31 +7,33 @@ export interface BootstrapPagerProps extends React.Props<BootstrapPager> {
     maxPage: number;
     currentPage: number;
     maxButtons?: number;
+    pageInfoText?: (from: number, to: number, total: number) => string;
+    filteredPageInfoText?: (from: number, to: number, filtered: number, total: number) => string;
     setPage: (number) => void;
     next: () => void;
     previous: () => void;
-    pagerStyle: any;
-    pagingInfoStyle: any;
 }
+
+export const DEFAULT_MAX_BUTTONS = 5;
 
 export class BootstrapPager extends React.Component<BootstrapPagerProps, any>{
     static defaultProps = {
-        maxButtons: 5
+        maxButtons: DEFAULT_MAX_BUTTONS
     };
 
     handleSelect = (event, selectedEvent) => {
         this.props.setPage(selectedEvent.eventKey - 1);
     };
 
-    getFilteredResults() {
+    getFilteredResults(): number {
         return null;
     }
 
-    getTotalResults() {
+    getTotalResults(): number {
         return null;
     }
 
-    getResutlsPerPage() {
+    getResutlsPerPage(): number {
         return null
     }
 
@@ -55,8 +57,7 @@ export class BootstrapPager extends React.Component<BootstrapPagerProps, any>{
                 endRecordIndex = subTotal;
             }
 
-            const infoFiltered = isFiltered ? ` / Filtered from ${totalResults}` : '';
-            info = `Display ${startRecordIndex} - ${endRecordIndex}. (Total: ${subTotal} ${infoFiltered})`;
+            info = isFiltered ? this.props.filteredPageInfoText(startRecordIndex, endRecordIndex, filteredResults, totalResults) : this.props.pageInfoText(startRecordIndex, endRecordIndex, totalResults);
         }
 
         return (

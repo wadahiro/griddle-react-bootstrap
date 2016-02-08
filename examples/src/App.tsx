@@ -204,6 +204,18 @@ export default class App extends React.Component<Props, any> {
                                 <td>5</td>
                                 <td></td>
                             </tr>
+                            <tr>
+                                <td>pageInfoText</td>
+                                <td>(from: number, to: number, total: number) => string</td>
+                                <td>`Display ${'{'}from} - ${'{'}to}. (Total: ${'{'}total})`</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>filteredPageInfoText</td>
+                                <td>(from: number, to: number, filtered: number, total: number) => string</td>
+                                <td>`Display ${'{'}from} - ${'{'}to}. (Total: ${'{'}filtered} / Filtered from ${'{'}total})`</td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </Table>
 

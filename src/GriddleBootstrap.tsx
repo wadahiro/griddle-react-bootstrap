@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createBootstrapPagerWithPageInfo } from './BootstrapPagerFactory';
+import { createBootstrapPagerWithPageInfo, PagerOptions, defaultPagerOptions } from './BootstrapPagerFactory';
 
 const Griddle = require('griddle-react');
 
@@ -83,10 +83,6 @@ export interface GriddleBootstrapProps extends GriddleProps<GriddleBootstrap> {
     pagerOptions?: PagerOptions;
 }
 
-export interface PagerOptions {
-    maxButtons?: number;
-}
-
 export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any> {
     static defaultProps = {
         tableClassName: '',
@@ -95,9 +91,7 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
         condensed: false,
         hover: false,
         striped: false,
-        pagerOptions: {
-            maxButtons: 5
-        }
+        pagerOptions: defaultPagerOptions
     };
 
     render() {
