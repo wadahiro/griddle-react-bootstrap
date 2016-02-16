@@ -113,7 +113,9 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
             <Griddle
                 {...this.props}
                 ref={ (ref) => {
-                    ref.props.customPagerComponent.bindGriddle(ref)
+                    if (ref) {
+                        ref.props.customPagerComponent.bindGriddle(ref);
+                    }
                 } }
                 tableClassName={tableClassName}
                 useGriddleStyles={false}
