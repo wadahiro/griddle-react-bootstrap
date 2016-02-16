@@ -94,6 +94,33 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
         pagerOptions: defaultPagerOptions
     };
 
+    state = {
+        pagerClass: null
+    };
+
+    constructor(props) {
+        super(props);
+        this.state.pagerClass = createBootstrapPagerWithPageInfo(props.pagerOptions);
+    }
+
+    componentWillReceiveProps(nextProps: GriddleBootstrapProps) {
+        const { pagerOptions } = this.props;
+        const nextPagerOptions = nextProps.pagerOptions;
+        if (pagerOptions.filteredPageInfoText !== nextPagerOptions.filteredPageInfoText ||
+            pagerOptions.maxButtons !== nextPagerOptions.maxButtons ||
+            pagerOptions.pageInfoText !== nextPagerOptions.pageInfoText) {
+
+            const nextPagerClass = createBootstrapPagerWithPageInfo(nextProps.pagerOptions);
+            if (this.state.pagerClass) {
+                nextPagerClass.bindGriddle(this.state.pagerClass.getGriddle());
+            }
+
+            this.setState({
+                pagerClass: nextPagerClass
+            });
+        }
+    }
+
     render() {
         let tableClassName = 'table ' + this.props.tableClassName;
         if (this.props.bordered) {
@@ -120,7 +147,7 @@ export class GriddleBootstrap extends React.Component<GriddleBootstrapProps, any
                 tableClassName={tableClassName}
                 useGriddleStyles={false}
                 useCustomPagerComponent={true}
-                customPagerComponent={ createBootstrapPagerWithPageInfo(this.props.pagerOptions) }
+                customPagerComponent={this.state.pagerClass}
                 />
         );
     }

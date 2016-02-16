@@ -32,17 +32,20 @@ function _createBootstrapPager(options: PagerOptions = defaultPagerOptions, show
         static bindGriddle(griddle: any) {
             this.griddle = griddle;
         };
+        static getGriddle() {
+            return this.griddle;
+        };
 
         getFilteredResults(): number {
-            return showPageInfo && Pager.griddle.state.filteredResults && Pager.griddle.state.filteredResults.length;
+            return showPageInfo && Pager.griddle && Pager.griddle.state.filteredResults && Pager.griddle.state.filteredResults.length;
         }
 
         getTotalResults(): number {
-            return showPageInfo && Pager.griddle.props.results && Pager.griddle.props.results.length;
+            return showPageInfo && Pager.griddle && Pager.griddle.props.results && Pager.griddle.props.results.length;
         }
 
         getResutlsPerPage(): number {
-            return showPageInfo && Pager.griddle.state.resultsPerPage
+            return showPageInfo && Pager.griddle && Pager.griddle.state.resultsPerPage
         }
 
         render() {
@@ -50,7 +53,6 @@ function _createBootstrapPager(options: PagerOptions = defaultPagerOptions, show
                 setTimeout(() => {
                     this.setState({});
                 }, 0);
-                return <div />;
             }
             return super.render();
         }
