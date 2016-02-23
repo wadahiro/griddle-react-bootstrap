@@ -11,8 +11,8 @@
   "scripts": {
     "test": "mocha --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
     "watch": "mocha -w --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
-    "dev": "set NODE_ENV=development && webpack -v -w",
-    "build": "set NODE_ENV=production && webpack -p",
+    "dev": "cross-env NODE_ENV=development webpack -v -w",
+    "build": "cross-env NODE_ENV=production webpack -p",
     "deploy": "gh-pages -d examples/public",
     "tscdev": "tsc -w --outDir examples/node_modules/griddle-react-bootstrap/lib",
     "prepublish": "tsc"
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/wadahiro/griddle-react-bootstrap#readme",
   "devDependencies": {
+    "cross-env": "^1.0.7",
     "espower-typescript": "^3.0.0",
     "gh-pages": "^0.9.0",
     "griddle-react": "^0.3.1",
