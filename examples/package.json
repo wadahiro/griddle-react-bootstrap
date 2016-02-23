@@ -4,8 +4,8 @@
   "description": "Example for Bootstrap pagination for griddle-react",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "set NODE_ENV=development && webpack -v -w",
-    "build": "set NODE_ENV=production && webpack -p"
+    "dev": "cross-env NODE_ENV=development webpack -v -w",
+    "build": "cross-env NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,14 @@
   },
   "homepage": "https://github.com/wadahiro/griddle-react-bootstrap#readme",
   "devDependencies": {
+    "cross-env": "^1.0.7",
     "ts-loader": "^0.7.2",
-    "typescript": "^1.8.0-dev.20160119",
+    "typescript": "^1.8.2",
     "webpack": "^1.12.11"
   },
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "griddle-react-bootstrap": "^0.2.0",
+    "griddle-react-bootstrap": "^0.4.2",
     "griddle-react": "^0.3.1",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
