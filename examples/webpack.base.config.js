@@ -20,7 +20,7 @@ module.exports = {
     target: 'web',
     entry: ['./src/App.tsx'],
     output: {
-        path: path.join(__dirname, 'public/js'),
+        path: path.join(__dirname, env.production ? 'dist/js' : 'public/js'),
         publicPath: '/js/',
         filename: 'bundle.js'
     },
@@ -39,6 +39,13 @@ module.exports = {
     resolve: {
         modulesDirectories: ['node_modules'],
         extensions: ['', '.tsx', '.ts', '.js']
+    },
+    externals: {
+        "react": "React",
+        "react-dom": "ReactDOM",
+        "react-bootstrap": "ReactBootstrap",
+        "underscore": "_",
+        "griddle-react": "Griddle"
     },
     plugins: [
         new webpack.DefinePlugin({
