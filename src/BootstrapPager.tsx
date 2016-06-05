@@ -21,8 +21,8 @@ export class BootstrapPager extends React.Component<BootstrapPagerProps, any>{
         maxButtons: DEFAULT_MAX_BUTTONS
     };
 
-    handleSelect = (event, selectedEvent) => {
-        this.props.setPage(selectedEvent.eventKey - 1);
+    handleSelect = (eventKey, event) => {
+        this.props.setPage(eventKey - 1);
     };
 
     getFilteredResults(): number {
