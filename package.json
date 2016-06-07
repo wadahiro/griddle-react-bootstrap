@@ -35,7 +35,7 @@
     "mocha": "^2.3.4",
     "power-assert": "^1.2.0",
     "react": "^0.14.6",
-    "react-bootstrap": "^0.28.2",
+    "react-bootstrap": "^0.29.0",
     "react-dom": "^0.14.6",
     "ts-loader": "^0.7.2",
     "typescript": "^1.8.2",
