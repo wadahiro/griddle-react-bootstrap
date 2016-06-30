@@ -25,11 +25,10 @@
   },
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "griddle-react": "^0.3.1",
-    "griddle-react-bootstrap": "^0.4.2",
+    "griddle-react": "^0.6.0",
+    "griddle-react-bootstrap": "^0.4.4",
     "react": "^15.1.0",
-    "react-bootstrap": "^0.29.4",
-    "react-dom": "^15.1.0",
-    "underscore": "^1.8.3"
+    "react-bootstrap": "^0.29.5",
+    "react-dom": "^15.1.0"
   }
 }
